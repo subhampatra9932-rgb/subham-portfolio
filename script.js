@@ -327,3 +327,48 @@ const btechResults = {
   sem7: { year: "4th Year", semester: 7, subjects: [], sgpa: "Pending" },
   sem8: { year: "4th Year", semester: 8, subjects: [], sgpa: "Pending" }
 };
+function getContactMessage() {
+    const name = document.getElementById("senderName").value.trim();
+    const email = document.getElementById("senderEmail").value.trim();
+    const subject = document.getElementById("messageSubject").value.trim();
+    const message = document.getElementById("senderMessage").value.trim();
+
+    if (!name || !email || !subject || !message) {
+        alert("Please fill in all fields.");
+        return null;
+    }
+
+    return { name, email, subject, message };
+}
+
+function sendToWhatsApp() {
+    const data = getContactMessage();
+    if (!data) return;
+
+    const text =
+        `Name: ${data.name}\n` +
+        `Email: ${data.email}\n` +
+        `Subject: ${data.subject}\n` +
+        `Message: ${data.message}`;
+
+    const whatsappNumber = "919508375187";
+    const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
+
+    window.open(url, "_blank");
+}
+
+function sendToEmail() {
+    const data = getContactMessage();
+    if (!data) return;
+
+    const recipient = "subhampatra9932@gmail.com";
+    const subject = encodeURIComponent(data.subject);
+    const body = encodeURIComponent(
+        `Name: ${data.name}\n` +
+        `Visitor Email: ${data.email}\n\n` +
+        `Message:\n${data.message}`
+    );
+
+    window.location.href =
+        `mailto:${recipient}?subject=${subject}&body=${body}`;
+}
