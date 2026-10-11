@@ -573,7 +573,35 @@
 
 </a>
 
-               
+<!-- SEND ME A MESSAGE FORM -->
+<div class="message-form">
+    <h2>Send Me a Message</h2>
+    <p>Feel free to contact me anytime!</p>
+
+    <form id="contactForm">
+        <input type="text" id="senderName"
+               placeholder="Your Name" required>
+
+        <input type="email" id="senderEmail"
+               placeholder="Your Email" required>
+
+        <input type="text" id="messageSubject"
+               placeholder="Subject" required>
+
+        <textarea id="senderMessage"
+                  placeholder="Write your message..."
+                  rows="5" required></textarea>
+
+        <button type="button" onclick="sendToEmail()">
+            ✉️ Send to Email
+        </button>
+
+        <button type="button" onclick="sendToWhatsApp()">
+            💬 Send to WhatsApp
+        </button>
+    </form>
+</div>
+       <br><br><br> <br><br>      
 
 
                
