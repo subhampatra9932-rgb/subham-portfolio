@@ -686,130 +686,51 @@ button {
 }
 
 
-/* =====================================================
-   RESULTS
-===================================================== */
-
-.result-grid {
-    display: grid;
-
-    grid-template-columns: repeat(3, 1fr);
-
-    gap: 20px;
+/* Academic Results */
+.academic-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 22px;
+  margin-top: 30px;
 }
 
-.result-card {
-    padding: 25px;
-
-    background: #10182b;
-
-    border: 1px solid #293957;
-
-    border-radius: 22px;
-
-    transition: 0.3s;
+.academic-card {
+  background: #0d1628;
+  border: 1px solid #00e5ff;
+  border-radius: 14px;
+  padding: 24px;
+  color: #ffffff;
+  text-align: center;
 }
 
-.result-card:hover {
-    transform: translateY(-5px);
-    border-color: #00e5ff;
+.academic-card h3 {
+  color: #00e5ff;
+  margin-bottom: 15px;
 }
 
-.result-top {
-    display: flex;
-
-    justify-content: space-between;
-
-    gap: 15px;
+.academic-card p {
+  margin: 10px 0;
+  color: #cbd5e1;
 }
 
-.result-top small {
-    color: #00e5ff;
-
-    font-size: 10px;
-    letter-spacing: 2px;
+.academic-card button {
+  background: #00e5ff;
+  color: #070b16;
+  border: none;
+  border-radius: 7px;
+  padding: 10px 15px;
+  margin: 6px 4px;
+  cursor: pointer;
+  font-weight: bold;
 }
 
-.result-top h3 {
-    margin-top: 5px;
+.academic-card button:hover {
+  opacity: 0.8;
 }
 
-.sgpa {
-    color: #00e5ff;
-
-    font-size: 27px;
-    font-weight: bold;
-
-    text-align: right;
+.academic-card [hidden] {
+  display: none !important;
 }
-
-.sgpa small {
-    display: block;
-
-    color: #8793aa;
-
-    font-size: 9px;
-}
-
-.result-status {
-    margin: 20px 0;
-
-    color: #72e6b0;
-
-    font-size: 12px;
-}
-
-.result-status.pending {
-    color: #ffc857;
-}
-
-.view-btn {
-    width: 100%;
-
-    padding: 11px;
-
-    border: 1px solid #304263;
-
-    border-radius: 12px;
-
-    background: #151f35;
-
-    color: white;
-
-    cursor: pointer;
-
-    transition: 0.3s;
-}
-
-.view-btn:hover {
-    background: #00e5ff;
-    color: #07101a;
-}
-
-.result-details {
-    max-height: 0;
-
-    overflow: hidden;
-
-    transition: max-height 0.4s ease;
-
-    color: #9da8bf;
-
-    font-size: 12px;
-}
-
-.result-details.active {
-    max-height: 700px;
-
-    margin-top: 15px;
-}
-
-.result-details p {
-    padding: 7px 0;
-
-    border-bottom: 1px solid #202e49;
-}
-
 
 /* =====================================================
    INTERNSHIP
