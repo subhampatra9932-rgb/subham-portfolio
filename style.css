@@ -1351,3 +1351,95 @@ footer p {
     margin: 10px auto !important;
     display: inline-block !important;
 }
+/* CONTACT MESSAGE FORM */
+.message-form {
+    max-width: 700px;
+    margin: 45px auto 0;
+    padding: 28px;
+    background: #10182b;
+    border: 1px solid #293957;
+    border-radius: 20px;
+}
+
+.message-form h2 {
+    color: #00e5ff;
+    margin-bottom: 8px;
+}
+
+.message-form p {
+    color: #aeb8cf;
+    margin-bottom: 20px;
+}
+
+.message-form input,
+.message-form textarea {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 14px;
+    border: 1px solid #304263;
+    border-radius: 10px;
+    background: #070b16;
+    color: white;
+    font: inherit;
+}
+
+.message-form button {
+    width: 100%;
+    margin-top: 8px;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    background: #00e5ff;
+    color: #070b16;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.message-form button:last-child {
+    background: #25D366;
+    color: #07140b;
+}
+
+.message-form button:hover {
+    opacity: 0.85;
+}
+
+@media (max-width: 500px) {
+    .message-form {
+        padding: 18px;
+    }
+}
+
+
+/* Footer ko poori width mein neeche lao */
+footer {
+    position: relative;
+    clear: both;
+    width: 100%;
+    margin-top: 60px;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* Footer ka content center mein */
+footer .footer-logo,
+footer h3,
+footer p {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Copyright line */
+footer .copyright {
+    width: 100%;
+    max-width: 500px;
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid #304263;
+}
